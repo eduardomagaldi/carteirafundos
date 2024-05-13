@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkcarteirafundos_front"]=self["webpackChunkcarteirafundos_front"]||[]).push([[91],{91:(a,n,r)=>{r.r(n),r.d(n,{default:()=>d});var s=r(641);const t={class:"about"},u=(0,s.Lk)("h1",null,"This is an about page",-1),e=[u];function c(a,n){return(0,s.uX)(),(0,s.CE)("div",t,e)}var o=r(262);const f={},i=(0,o.A)(f,[["render",c]]),d=i}}]);
-//# sourceMappingURL=91.9a66b74d.js.map
