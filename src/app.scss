@@ -1,0 +1,123 @@
+@use "sass:math";
+
+@import "node_modules/bootstrap/scss/functions";
+
+$theme-colors: (
+  "primary": #998744,
+  "secondary": #00263d,
+);
+// $spacer: 10px;
+
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/utilities";
+@import "node_modules/bootstrap/scss/forms";
+@import "node_modules/bootstrap/scss/grid";
+@import "node_modules/bootstrap/scss/input-group";
+@import "node_modules/bootstrap/scss/breadcrumb";
+@import "node_modules/bootstrap/scss/buttons";
+@import "node_modules/bootstrap/scss/nav";
+@import "node_modules/bootstrap/scss/badge";
+@import "node_modules/bootstrap/scss/dropdown";
+
+@import "node_modules/bootstrap-vue/src/index.scss";
+
+body {
+  font-size: 18px;
+}
+
+.uppercase {
+  text-transform: uppercase !important;
+}
+
+.colorful {
+  overflow: visible;
+  max-width: 600px;
+  color: #f0d072;
+  background-size: 100%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.border-gradient,
+.colorful {
+  background-image: linear-gradient(90deg, #9b7e27, #d9a60d);
+  padding: 2px;
+  border-radius: 7px;
+}
+
+.border-gradient-inverted {
+  background-image: linear-gradient(90deg, #574611, #ffd24a);
+}
+
+.border-gradient-inner {
+  width: 100%;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.title {
+  position: relative;
+  display: inline-block;
+  z-index: 10;
+
+  span {
+    position: relative;
+    z-index: 10;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: calc(100% + 10px);
+    height: 30%;
+    background-color: #ecd68e;
+    z-index: 5;
+    bottom: 20%;
+    transform: skew(-20deg, 0);
+    left: -5px;
+  }
+}
+
+.link {
+  display: block;
+  border-radius: 0;
+  color: #998744;
+  padding: 5px 10px;
+  transition: background-color 0.3s, color 0.3s;
+  border-bottom: 1px solid #ecd68e;
+
+  &:hover {
+    background-color: #fff4ce;
+    text-decoration: none;
+    color: #a67e07;
+  }
+
+  .link-title {
+    margin-bottom: -3px;
+  }
+}
+
+.dark {
+  background-color: #00263d;
+  color: white;
+
+  .border-gradient-inner {
+    background-color: #00263d;
+  }
+
+  .title {
+    span {
+      color: white;
+    }
+
+    &::before {
+      background-color: #6e5d21;
+      background-color: #78672d;
+      background-color: #635626;
+    }
+  }
+}
